@@ -1,0 +1,52 @@
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+}
+
+[data-theme='dark'] {
+  --background-color: #333;
+  --text-color: #fff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--background-color);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.search-page {
+  padding: 1rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.book-card {
+  background-color: var(--background-color);
+  padding: 1rem;
+  margin: 0.5rem;
+  border: 1px solid #ccc;
+  flex: 1 1 calc(33.333% - 1rem);
+}
