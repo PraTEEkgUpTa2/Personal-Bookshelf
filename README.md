@@ -53,7 +53,7 @@ git clone https://github.com/your-username/book-search-bookshelf.git
 ```sh
 cd book-search-bookshelf
 ```
-3.**Install dependencies:**
+3. **Install dependencies:**
 
 ```sh
 npm install
