@@ -48,12 +48,7 @@ Ensure you have the following software installed on your local machine:
 git clone https://github.com/your-username/book-search-bookshelf.git
 
 ```
-2. **Navigate to the project directory:**
-
-```sh
-cd book-search-app
-```
-3. **Install dependencies:**
+2. **Install dependencies:**
 
 ```sh
 npm install
