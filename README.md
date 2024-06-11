@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+# Personal Bookshelf
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a React application that allows users to search for books using the Open Library API and maintain a personal bookshelf in the browser using localStorage. The application includes two main pages: a Book Search Page and a Personal Bookshelf Page. Users can search for books, view search results in real-time, and add their favorite books to a personal bookshelf that persists across sessions.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+### Book Search Page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Input field for users to type in a book's name.
+- Real-time display of search results as the user types.
+- Integration with the Open Library API to fetch book data.
+- Display search results in a list of cards, each representing a book.
+- Button to add books from search results to the personal bookshelf.
+- Button to navigate to the Personal Bookshelf Page.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Personal Bookshelf Page
 
-### `npm test`
+- Displays the user's personal bookshelf.
+- Bookshelf data is stored in localStorage for persistent storage.
+- Allows users to view the books they have added to their bookshelf.
+- Pagination for displaying books in sets of 10, with navigation buttons.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+- **React**: For building the user interface.
+- **Axios**: For making API requests.
+- **Lodash.debounce**: For debouncing the search input.
+- **React Router DOM**: For client-side routing.
+- **localStorage**: For storing the user's personal bookshelf.
+- **CSS**: For styling the application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation and Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Ensure you have the following software installed on your local machine:
 
-### `npm run eject`
+- [Node.js](https://nodejs.org/) (v14 or later)
+- [npm](https://www.npmjs.com/) (v6 or later) or [Yarn](https://yarnpkg.com/) (v1.22 or later)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Steps to Set Up the Project Locally
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Clone the repository:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```sh
+git clone https://github.com/your-username/book-search-bookshelf.git
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+2. **Navigate to the project directory:**
 
-## Learn More
+```sh
+cd book-search-bookshelf
+```
+3.**Install dependencies:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+npm install
+npm install --save-dev @types/lodash.debounce
+```
+### Steps to Run the Application on a Local Machine
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Start the development server:**
+
+```sh
+npm start
+```
+
+
