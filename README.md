@@ -51,7 +51,7 @@ git clone https://github.com/your-username/book-search-bookshelf.git
 2. **Navigate to the project directory:**
 
 ```sh
-cd book-search-bookshelf
+cd book-search-app
 ```
 3. **Install dependencies:**
 
