@@ -1,20 +1,22 @@
 import React from 'react';
 import './BookCard.css';
+import { getUserIdentifier } from '../utils';
 
 interface BookCardProps {
   book: any;
 }
 
 const BookCard: React.FC<BookCardProps> = ({ book }) => {
+  const userId = getUserIdentifier();
+
   const handleAddToBookshelf = () => {
-    const savedBooks = JSON.parse(localStorage.getItem('bookshelf') || '[]');
-    const bookExists = savedBooks.some((savedBook: any) => savedBook.key === book.key);
-    if (!bookExists) {
-      savedBooks.push(book);
-      localStorage.setItem('bookshelf', JSON.stringify(savedBooks));
-      alert(`${book.title} has been added to your bookshelf`);
+    const savedBooks = JSON.parse(localStorage.getItem(`${userId}_bookshelf`) || '[]');
+    if (!savedBooks.some((savedBook: any) => savedBook.key === book.key)) {
+      const updatedBooks = [...savedBooks, book];
+      localStorage.setItem(`${userId}_bookshelf`, JSON.stringify(updatedBooks));
+      alert('Book saved to your bookshelf!');
     } else {
-      alert(`${book.title} is already in your bookshelf`);
+      alert('This book is already in your bookshelf.');
     }
   };
 

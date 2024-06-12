@@ -10,7 +10,7 @@ const BookSearchPage: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
 
-  const fetchBooks = useCallback(debounce(async (page: number) => {
+  const fetchBooks = useCallback(async (page: number) => {
     if (!query) return;
     
     setLoading(true);
@@ -24,7 +24,7 @@ const BookSearchPage: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  }), [query]);
+  }, [query]);
 
   useEffect(() => {
     fetchBooks(currentPage);

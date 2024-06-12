@@ -1,6 +1,12 @@
 :root {
   --background-color: #fff;
   --text-color: #000;
+  --light-bg-color: #ffffff;
+  --light-text-color: #000000;
+  --light-button-bg: #e0e0e0;
+  --light-button-shadow: #aaaaaa;
+
+  
 }
 
 [data-theme='dark'] {
@@ -25,7 +31,21 @@ button {
   padding: 0.5rem 1rem;
   margin: 0.5rem;
   border: none;
+  border-radius: 10px;
   cursor: pointer;
+  background-color: var(--light-button-bg);
+  color: var(--light-text-color);
+  
+  transition: all 0.3s ease;
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 1px 1px 3px;
+}
+
+button:hover {
+  box-shadow: 2px 2px 5px;
 }
 
 .search-page {

@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import './BookShelfPage.css';
+import { getUserIdentifier } from '../utils';
 
 const BookshelfPage: React.FC = () => {
   const [bookshelf, setBookshelf] = useState<any[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [booksPerPage] = useState(10); 
+  const userId = getUserIdentifier();
 
   useEffect(() => {
-    const savedBooks = JSON.parse(localStorage.getItem('bookshelf') || '[]');
+    const savedBooks = JSON.parse(localStorage.getItem(`${userId}_bookshelf`) || '[]');
     setBookshelf(savedBooks);
-  }, []);
+  }, [userId]);
 
   const indexOfLastBook = currentPage * booksPerPage;
   const indexOfFirstBook = indexOfLastBook - booksPerPage;
