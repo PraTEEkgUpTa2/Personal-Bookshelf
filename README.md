@@ -52,7 +52,6 @@ git clone https://github.com/your-username/book-search-bookshelf.git
 
 ```sh
 npm install
-npm install --save-dev @types/lodash.debounce
 ```
 ### Steps to Run the Application on a Local Machine
 
