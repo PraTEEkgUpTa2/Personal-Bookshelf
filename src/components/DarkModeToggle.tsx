@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Sun, Moon } from 'lucide-react';
 
 const DarkModeToggle: React.FC = () => {
   const [theme, setTheme] = useState('light');
@@ -18,7 +19,7 @@ const DarkModeToggle: React.FC = () => {
 
   return (
     <button onClick={toggleTheme}>
-      {theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
+      {theme === 'light' ? <Moon /> : <Sun />}
     </button>
   );
 };
